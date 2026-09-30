@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSIS Capstone Finals — 123 Identification Terms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+:root{--bg:#0a0a0b;--panel:rgba(28,29,32,.72);--line:rgba(255,255,255,.11);--text:#f2f2f2;--muted:#a7a7ad;--shadow:0 18px 50px rgba(0,0,0,.3)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 12% 0%,rgba(255,255,255,.08),transparent 30%),radial-gradient(circle at 88% 12%,rgba(255,255,255,.045),transparent 25%),var(--bg)}
+button,input{font:inherit}button{color:inherit}
+.topbar{position:sticky;top:0;z-index:1000;padding:14px 18px;background:rgba(10,10,11,.76);backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%);border-bottom:1px solid var(--line)}
+.top-inner{max-width:1180px;margin:auto;display:flex;gap:12px;align-items:center}
+.search-wrap{position:relative;flex:1}.search-wrap i{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#a9a9ad}
+#search{width:100%;border:1px solid var(--line);border-radius:16px;outline:none;background:rgba(255,255,255,.065);color:var(--text);padding:14px 48px 14px 45px;box-shadow:inset 0 1px rgba(255,255,255,.04)}
+#search::placeholder{color:#8e8e94}#search:focus{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.09)}
+.clear-btn,.top-btn{border:1px solid var(--line);background:rgba(255,255,255,.06);border-radius:13px;width:44px;height:44px;cursor:pointer;transition:.2s}
+.clear-btn{position:absolute;right:6px;top:5px;width:36px;height:36px;border:0;background:transparent;color:#999}
+.top-btn:hover,.clear-btn:hover,.nav-chip:hover,.copy-btn:hover{background:rgba(255,255,255,.13)}
+.stats{white-space:nowrap;color:var(--muted);font-size:13px}
+.container{max-width:1180px;margin:auto;padding:44px 18px 80px}
+.hero{margin-bottom:28px}.kicker{color:#aaa;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0 0 9px}
+h1{margin:0;font-size:clamp(32px,5vw,56px);letter-spacing:-.045em;line-height:1}
+.hero p{max-width:760px;color:var(--muted);line-height:1.65;margin:16px 0 0}
+.nav-panel{padding:16px;margin:26px 0 42px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.035);backdrop-filter:blur(16px);box-shadow:var(--shadow)}
+.nav-title{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#9d9da3;margin:0 0 12px;font-weight:700}
+.nav-chips{display:flex;flex-wrap:wrap;gap:8px}.nav-chip{border:1px solid var(--line);background:rgba(255,255,255,.045);padding:9px 12px;border-radius:999px;cursor:pointer;font-size:12px}.nav-chip i{margin-right:7px;color:#aaa}
+.section-block{scroll-margin-top:90px;margin:0 0 48px}.section-heading{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.section-index{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;border:1px solid var(--line);background:rgba(255,255,255,.055);color:#aaa;font-size:12px;font-weight:700}
+.eyebrow{margin:0 0 3px;color:#8d8d93;font-size:10px;letter-spacing:.13em;font-weight:700}
+h2{margin:0;font-size:clamp(18px,2.5vw,25px);letter-spacing:-.025em}.count-badge{margin-left:auto;color:#9d9da3;font-size:11px;border:1px solid var(--line);border-radius:999px;padding:7px 10px}
+.cards{display:grid;gap:10px}
+.term-card{position:relative;display:grid;grid-template-columns:52px 1fr 42px;gap:12px;align-items:start;padding:17px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,rgba(255,255,255,.065),rgba(255,255,255,.028));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:transform .18s,border-color .18s,background .18s}
+.term-card:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.075)}
+.term-number{color:#777980;font-size:12px;font-weight:700;padding-top:3px}.term-body h3{margin:0 0 7px;font-size:15px;line-height:1.35}.term-body p{margin:0;color:#b8b8bd;font-size:13px;line-height:1.65}
+.copy-btn{width:38px;height:38px;border-radius:11px;border:1px solid transparent;background:transparent;color:#8d8d93;cursor:pointer}
+.no-results{display:none;text-align:center;padding:55px 20px;color:#999;border:1px dashed var(--line);border-radius:20px}.no-results i{font-size:28px;margin-bottom:10px}
+.footer{text-align:center;color:#68686e;font-size:11px;padding-top:10px}.hidden{display:none!important}
+mark{background:rgba(255,255,255,.16);color:#fff;border-radius:3px;padding:0 2px}
+@media(max-width:760px){
+ .topbar{padding:10px}.top-inner{gap:8px}.stats{display:none}.container{padding:30px 12px 60px}
+ .hero{margin-bottom:22px}.nav-panel{margin-bottom:30px;border-radius:18px}
+ .term-card{grid-template-columns:40px 1fr 36px;padding:14px;border-radius:15px;gap:8px}
+ .term-body h3{font-size:14px}.term-body p{font-size:12.5px;line-height:1.6}
+ .section-heading{gap:10px}.section-index{width:36px;height:36px;border-radius:10px}.count-badge{font-size:10px;padding:6px 8px}
+ .nav-chip{font-size:11px;padding:8px 10px}
+}
+@media(max-width:430px){
+ h1{font-size:31px}.term-card{grid-template-columns:34px 1fr}.copy-btn{display:none}.count-badge{display:none}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="top-inner">
+<div class="search-wrap">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input id="search" type="search" autocomplete="off" placeholder="Search terms or definitions, then press Enter..." aria-label="Search terms and definitions">
+<button class="clear-btn" id="clearSearch" title="Clear search" aria-label="Clear search"><i class="fa-solid fa-xmark"></i></button>
+</div>
+<div class="stats"><span id="resultCount">123</span> / 123</div>
+<button class="top-btn" title="Back to top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i></button>
+</div>
+</header>
+<main class="container">
+
+
+<div id="resultsArea">
+<section class="section-block" id="section-1">
+  <div class="section-heading">
+    <span class="section-index">01</span>
+    <div><p class="eyebrow">SECTION 1</p><h2>Bsis Capstone Project</h2></div>
+    <span class="count-badge">7 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="bsis capstone project" data-definition="a project that applies business, information, technology, and people concepts to address a real organizational problem." data-section="bsis capstone project">
+  <div class="term-number">001</div>
+  <div class="term-body">
+    <h3>BSIS Capstone Project</h3>
+    <p>A project that applies business, information, technology, and people concepts to address a real organizational problem.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: BSIS Capstone Project" onclick="copyTerm(this, "BSIS Capstone Project")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="from problem to proposal" data-definition="the process of starting with a real problem, gathering evidence, identifying requirements, proposing a system, and planning its evaluation." data-section="bsis capstone project">
+  <div class="term-number">002</div>
+  <div class="term-body">
+    <h3>From Problem to Proposal</h3>
+    <p>The process of starting with a real problem, gathering evidence, identifying requirements, proposing a system, and planning its evaluation.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: From Problem to Proposal" onclick="copyTerm(this, "From Problem to Proposal")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="business/organization" data-definition="the part of a bsis project concerned with organizational processes, roles, and decisions." data-section="bsis capstone project">
+  <div class="term-number">003</div>
+  <div class="term-body">
+    <h3>Business/Organization</h3>
+    <p>The part of a BSIS project concerned with organizational processes, roles, and decisions.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Business/Organization" onclick="copyTerm(this, "Business/Organization")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="information" data-definition="data, records, and reports used to support organizational activities and decisions." data-section="bsis capstone project">
+  <div class="term-number">004</div>
+  <div class="term-body">
+    <h3>Information</h3>
+    <p>Data, records, and reports used to support organizational activities and decisions.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Information" onclick="copyTerm(this, "Information")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="technology" data-definition="the systems, databases, and interfaces used to support or improve organizational processes." data-section="bsis capstone project">
+  <div class="term-number">005</div>
+  <div class="term-body">
+    <h3>Technology</h3>
+    <p>The systems, databases, and interfaces used to support or improve organizational processes.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Technology" onclick="copyTerm(this, "Technology")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="people" data-definition="the users of a system, including their needs, adoption, and usability." data-section="bsis capstone project">
+  <div class="term-number">006</div>
+  <div class="term-body">
+    <h3>People</h3>
+    <p>The users of a system, including their needs, adoption, and usability.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: People" onclick="copyTerm(this, "People")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="the big question" data-definition="the main question of a bsis capstone: how an information system can improve a real process, decision, service, or information flow." data-section="bsis capstone project">
+  <div class="term-number">007</div>
+  <div class="term-body">
+    <h3>The Big Question</h3>
+    <p>The main question of a BSIS capstone: how an information system can improve a real process, decision, service, or information flow.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: The Big Question" onclick="copyTerm(this, "The Big Question")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-2">
+  <div class="section-heading">
+    <span class="section-index">02</span>
+    <div><p class="eyebrow">SECTION 2</p><h2>The Capstone Logic Chain</h2></div>
+    <span class="count-badge">7 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="the capstone logic chain" data-definition="a sequence that connects the identified problem to evidence, research, requirements, the proposed system, and its evaluation." data-section="the capstone logic chain">
+  <div class="term-number">008</div>
+  <div class="term-body">
+    <h3>The Capstone Logic Chain</h3>
+    <p>A sequence that connects the identified problem to evidence, research, requirements, the proposed system, and its evaluation.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: The Capstone Logic Chain" onclick="copyTerm(this, "The Capstone Logic Chain")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="problem" data-definition="what is not working properly or what needs improvement." data-section="the capstone logic chain">
+  <div class="term-number">009</div>
+  <div class="term-body">
+    <h3>Problem</h3>
+    <p>What is not working properly or what needs improvement.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Problem" onclick="copyTerm(this, "Problem")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="evidence" data-definition="information or proof that shows how we know a problem exists." data-section="the capstone logic chain">
+  <div class="term-number">010</div>
+  <div class="term-body">
+    <h3>Evidence</h3>
+    <p>Information or proof that shows how we know a problem exists.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Evidence" onclick="copyTerm(this, "Evidence")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="literature" data-definition="previous research, studies, or knowledge that can help explain or address the problem." data-section="the capstone logic chain">
+  <div class="term-number">011</div>
+  <div class="term-body">
+    <h3>Literature</h3>
+    <p>Previous research, studies, or knowledge that can help explain or address the problem.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Literature" onclick="copyTerm(this, "Literature")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="requirements" data-definition="what the proposed system should do to address the identified needs." data-section="the capstone logic chain">
+  <div class="term-number">012</div>
+  <div class="term-body">
+    <h3>Requirements</h3>
+    <p>What the proposed system should do to address the identified needs.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Requirements" onclick="copyTerm(this, "Requirements")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="system" data-definition="the information system that will be designed or built to address the problem." data-section="the capstone logic chain">
+  <div class="term-number">013</div>
+  <div class="term-body">
+    <h3>System</h3>
+    <p>The information system that will be designed or built to address the problem.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: System" onclick="copyTerm(this, "System")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="evaluation" data-definition="the process of determining how well the system works or how its results will be judged." data-section="the capstone logic chain">
+  <div class="term-number">014</div>
+  <div class="term-body">
+    <h3>Evaluation</h3>
+    <p>The process of determining how well the system works or how its results will be judged.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Evaluation" onclick="copyTerm(this, "Evaluation")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-3">
+  <div class="section-heading">
+    <span class="section-index">03</span>
+    <div><p class="eyebrow">SECTION 3</p><h2>Start With A Real Problem</h2></div>
+    <span class="count-badge">6 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="start with a real problem" data-definition="an approach where the capstone begins with an actual organizational problem rather than immediately deciding to build an application." data-section="start with a real problem">
+  <div class="term-number">015</div>
+  <div class="term-body">
+    <h3>Start With a Real Problem</h3>
+    <p>An approach where the capstone begins with an actual organizational problem rather than immediately deciding to build an application.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Start With a Real Problem" onclick="copyTerm(this, "Start With a Real Problem")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="organizational need" data-definition="a real need or problem observed within an organization that can potentially be improved through an information system." data-section="start with a real problem">
+  <div class="term-number">016</div>
+  <div class="term-body">
+    <h3>Organizational Need</h3>
+    <p>A real need or problem observed within an organization that can potentially be improved through an information system.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Organizational Need" onclick="copyTerm(this, "Organizational Need")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="real process" data-definition="an actual organizational workflow that may be manual, slow, duplicated, or difficult to monitor." data-section="start with a real problem">
+  <div class="term-number">017</div>
+  <div class="term-body">
+    <h3>Real Process</h3>
+    <p>An actual organizational workflow that may be manual, slow, duplicated, or difficult to monitor.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Real Process" onclick="copyTerm(this, "Real Process")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="information need" data-definition="the need for a reliable flow of data, status information, and reports." data-section="start with a real problem">
+  <div class="term-number">018</div>
+  <div class="term-body">
+    <h3>Information Need</h3>
+    <p>The need for a reliable flow of data, status information, and reports.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Information Need" onclick="copyTerm(this, "Information Need")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="manual process" data-definition="a process that depends heavily on people performing tasks manually rather than through an automated system." data-section="start with a real problem">
+  <div class="term-number">019</div>
+  <div class="term-body">
+    <h3>Manual Process</h3>
+    <p>A process that depends heavily on people performing tasks manually rather than through an automated system.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Manual Process" onclick="copyTerm(this, "Manual Process")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="information flow" data-definition="the movement of information, data, or records from one step, person, or part of an organization to another." data-section="start with a real problem">
+  <div class="term-number">020</div>
+  <div class="term-body">
+    <h3>Information Flow</h3>
+    <p>The movement of information, data, or records from one step, person, or part of an organization to another.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Information Flow" onclick="copyTerm(this, "Information Flow")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-4">
+  <div class="section-heading">
+    <span class="section-index">04</span>
+    <div><p class="eyebrow">SECTION 4</p><h2>Ask Before Building</h2></div>
+    <span class="count-badge">5 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="ask before building" data-definition="the practice of investigating the current process and identifying its problems and information needs before deciding what system to develop." data-section="ask before building">
+  <div class="term-number">021</div>
+  <div class="term-body">
+    <h3>Ask Before Building</h3>
+    <p>The practice of investigating the current process and identifying its problems and information needs before deciding what system to develop.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Ask Before Building" onclick="copyTerm(this, "Ask Before Building")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="process delay" data-definition="a situation where work takes longer than necessary because of problems in the process." data-section="ask before building">
+  <div class="term-number">022</div>
+  <div class="term-body">
+    <h3>Process Delay</h3>
+    <p>A situation where work takes longer than necessary because of problems in the process.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Process Delay" onclick="copyTerm(this, "Process Delay")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="information loss" data-definition="a situation where needed information is lost, unavailable, or cannot be properly accessed." data-section="ask before building">
+  <div class="term-number">023</div>
+  <div class="term-body">
+    <h3>Information Loss</h3>
+    <p>A situation where needed information is lost, unavailable, or cannot be properly accessed.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Information Loss" onclick="copyTerm(this, "Information Loss")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="duplicate information" data-definition="repeated copies or entries of the same information that can cause unnecessary work or inconsistency." data-section="ask before building">
+  <div class="term-number">024</div>
+  <div class="term-body">
+    <h3>Duplicate Information</h3>
+    <p>Repeated copies or entries of the same information that can cause unnecessary work or inconsistency.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Duplicate Information" onclick="copyTerm(this, "Duplicate Information")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="information visibility" data-definition="the ability to easily see or access important information, status, or activities." data-section="ask before building">
+  <div class="term-number">025</div>
+  <div class="term-body">
+    <h3>Information Visibility</h3>
+    <p>The ability to easily see or access important information, status, or activities.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Information Visibility" onclick="copyTerm(this, "Information Visibility")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-5">
+  <div class="section-heading">
+    <span class="section-index">05</span>
+    <div><p class="eyebrow">SECTION 5</p><h2>What Is A Good Bsis Problem?</h2></div>
+    <span class="count-badge">5 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="what is a good bsis problem?" data-definition="a bsis problem is one that is observable, specific, documentable, and addressable through a reasonable information system intervention." data-section="what is a good bsis problem?">
+  <div class="term-number">026</div>
+  <div class="term-body">
+    <h3>What Is a Good BSIS Problem?</h3>
+    <p>A BSIS problem is one that is observable, specific, documentable, and addressable through a reasonable information system intervention.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: What Is a Good BSIS Problem?" onclick="copyTerm(this, "What Is a Good BSIS Problem?")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="observable" data-definition="a problem that can be seen in a workflow, record, or user experience." data-section="what is a good bsis problem?">
+  <div class="term-number">027</div>
+  <div class="term-body">
+    <h3>Observable</h3>
+    <p>A problem that can be seen in a workflow, record, or user experience.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Observable" onclick="copyTerm(this, "Observable")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="specific" data-definition="a problem that has a clear process, context, and affected users." data-section="what is a good bsis problem?">
+  <div class="term-number">028</div>
+  <div class="term-body">
+    <h3>Specific</h3>
+    <p>A problem that has a clear process, context, and affected users.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Specific" onclick="copyTerm(this, "Specific")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="documentable" data-definition="a problem that can be supported with evidence from interviews, observations, or documents." data-section="what is a good bsis problem?">
+  <div class="term-number">029</div>
+  <div class="term-body">
+    <h3>Documentable</h3>
+    <p>A problem that can be supported with evidence from interviews, observations, or documents.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Documentable" onclick="copyTerm(this, "Documentable")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="addressable" data-definition="a problem that can reasonably be improved through an information system intervention." data-section="what is a good bsis problem?">
+  <div class="term-number">030</div>
+  <div class="term-body">
+    <h3>Addressable</h3>
+    <p>A problem that can reasonably be improved through an information system intervention.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Addressable" onclick="copyTerm(this, "Addressable")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-6">
+  <div class="section-heading">
+    <span class="section-index">06</span>
+    <div><p class="eyebrow">SECTION 6</p><h2>Examples Of Organizational Problems</h2></div>
+    <span class="count-badge">7 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="examples of organizational problems" data-definition="common organizational problems that an information system may address, such as records, scheduling, reporting, monitoring, communication, and data quality problems." data-section="examples of organizational problems">
+  <div class="term-number">031</div>
+  <div class="term-body">
+    <h3>Examples of Organizational Problems</h3>
+    <p>Common organizational problems that an information system may address, such as records, scheduling, reporting, monitoring, communication, and data quality problems.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Examples of Organizational Problems" onclick="copyTerm(this, "Examples of Organizational Problems")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="records problem" data-definition="a problem involving paper forms, manual records, or inefficient record handling." data-section="examples of organizational problems">
+  <div class="term-number">032</div>
+  <div class="term-body">
+    <h3>Records Problem</h3>
+    <p>A problem involving paper forms, manual records, or inefficient record handling.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Records Problem" onclick="copyTerm(this, "Records Problem")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="scheduling problem" data-definition="a problem where schedules are manually tracked through chats, notebooks, or other inefficient methods." data-section="examples of organizational problems">
+  <div class="term-number">033</div>
+  <div class="term-body">
+    <h3>Scheduling Problem</h3>
+    <p>A problem where schedules are manually tracked through chats, notebooks, or other inefficient methods.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Scheduling Problem" onclick="copyTerm(this, "Scheduling Problem")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="reporting problem" data-definition="a problem caused by multiple spreadsheets, duplicate reports, or inefficient report preparation." data-section="examples of organizational problems">
+  <div class="term-number">034</div>
+  <div class="term-body">
+    <h3>Reporting Problem</h3>
+    <p>A problem caused by multiple spreadsheets, duplicate reports, or inefficient report preparation.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Reporting Problem" onclick="copyTerm(this, "Reporting Problem")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="monitoring problem" data-definition="a problem where important information, such as stock levels, is updated late or is difficult to monitor." data-section="examples of organizational problems">
+  <div class="term-number">035</div>
+  <div class="term-body">
+    <h3>Monitoring Problem</h3>
+    <p>A problem where important information, such as stock levels, is updated late or is difficult to monitor.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Monitoring Problem" onclick="copyTerm(this, "Monitoring Problem")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="communication problem" data-definition="a problem where users repeatedly ask for the same information because information is not easily available." data-section="examples of organizational problems">
+  <div class="term-number">036</div>
+  <div class="term-body">
+    <h3>Communication Problem</h3>
+    <p>A problem where users repeatedly ask for the same information because information is not easily available.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Communication Problem" onclick="copyTerm(this, "Communication Problem")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="data quality problem" data-definition="a problem where different copies of the same record produce inconsistent information." data-section="examples of organizational problems">
+  <div class="term-number">037</div>
+  <div class="term-body">
+    <h3>Data Quality Problem</h3>
+    <p>A problem where different copies of the same record produce inconsistent information.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Data Quality Problem" onclick="copyTerm(this, "Data Quality Problem")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-7">
+  <div class="section-heading">
+    <span class="section-index">07</span>
+    <div><p class="eyebrow">SECTION 7</p><h2>Weak Starting Point Vs. Strong Starting Point</h2></div>
+    <span class="count-badge">4 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="weak starting point" data-definition="beginning a project by deciding what application to build without first establishing and investigating a real problem." data-section="weak starting point vs. strong starting point">
+  <div class="term-number">038</div>
+  <div class="term-body">
+    <h3>Weak Starting Point</h3>
+    <p>Beginning a project by deciding what application to build without first establishing and investigating a real problem.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Weak Starting Point" onclick="copyTerm(this, "Weak Starting Point")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="strong starting point" data-definition="beginning with an observed organizational problem supported by evidence, users, and processes." data-section="weak starting point vs. strong starting point">
+  <div class="term-number">039</div>
+  <div class="term-body">
+    <h3>Strong Starting Point</h3>
+    <p>Beginning with an observed organizational problem supported by evidence, users, and processes.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Strong Starting Point" onclick="copyTerm(this, "Strong Starting Point")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="problem-first approach" data-definition="an approach that identifies and investigates the problem before deciding on system features or solutions." data-section="weak starting point vs. strong starting point">
+  <div class="term-number">040</div>
+  <div class="term-body">
+    <h3>Problem-First Approach</h3>
+    <p>An approach that identifies and investigates the problem before deciding on system features or solutions.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Problem-First Approach" onclick="copyTerm(this, "Problem-First Approach")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="arbitrary features" data-definition="system features selected without sufficient evidence or a documented connection to an actual user or organizational need." data-section="weak starting point vs. strong starting point">
+  <div class="term-number">041</div>
+  <div class="term-body">
+    <h3>Arbitrary Features</h3>
+    <p>System features selected without sufficient evidence or a documented connection to an actual user or organizational need.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Arbitrary Features" onclick="copyTerm(this, "Arbitrary Features")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-8">
+  <div class="section-heading">
+    <span class="section-index">08</span>
+    <div><p class="eyebrow">SECTION 8</p><h2>Preliminary Investigation</h2></div>
+    <span class="count-badge">5 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="preliminary investigation" data-definition="the investigation of the current situation before finalizing the capstone title." data-section="preliminary investigation">
+  <div class="term-number">042</div>
+  <div class="term-body">
+    <h3>Preliminary Investigation</h3>
+    <p>The investigation of the current situation before finalizing the capstone title.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Preliminary Investigation" onclick="copyTerm(this, "Preliminary Investigation")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="interview" data-definition="a method of gathering information by asking users what happens, what problems they experience, and what they need." data-section="preliminary investigation">
+  <div class="term-number">043</div>
+  <div class="term-body">
+    <h3>Interview</h3>
+    <p>A method of gathering information by asking users what happens, what problems they experience, and what they need.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Interview" onclick="copyTerm(this, "Interview")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="observation" data-definition="a method of gathering evidence by watching the actual workflow rather than relying only on what users report." data-section="preliminary investigation">
+  <div class="term-number">044</div>
+  <div class="term-body">
+    <h3>Observation</h3>
+    <p>A method of gathering evidence by watching the actual workflow rather than relying only on what users report.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Observation" onclick="copyTerm(this, "Observation")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="document review" data-definition="the examination of existing forms, spreadsheets, reports, policies, and records to understand the current process." data-section="preliminary investigation">
+  <div class="term-number">045</div>
+  <div class="term-body">
+    <h3>Document Review</h3>
+    <p>The examination of existing forms, spreadsheets, reports, policies, and records to understand the current process.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Document Review" onclick="copyTerm(this, "Document Review")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="survey" data-definition="a data-gathering method used to measure perceptions, frequency, quantity, or patterns, especially among a larger user base." data-section="preliminary investigation">
+  <div class="term-number">046</div>
+  <div class="term-body">
+    <h3>Survey</h3>
+    <p>A data-gathering method used to measure perceptions, frequency, quantity, or patterns, especially among a larger user base.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Survey" onclick="copyTerm(this, "Survey")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-9">
+  <div class="section-heading">
+    <span class="section-index">09</span>
+    <div><p class="eyebrow">SECTION 9</p><h2>Interview: Ask About The Process</h2></div>
+    <span class="count-badge">6 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="interview: ask about the process" data-definition="an approach to interviewing that uses concrete, process-oriented, and open-ended questions to understand how work is actually performed." data-section="interview: ask about the process">
+  <div class="term-number">047</div>
+  <div class="term-body">
+    <h3>Interview: Ask About the Process</h3>
+    <p>An approach to interviewing that uses concrete, process-oriented, and open-ended questions to understand how work is actually performed.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Interview: Ask About the Process" onclick="copyTerm(this, "Interview: Ask About the Process")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="process-oriented question" data-definition="a question that focuses on how a process is performed, including its steps, problems, information, and outputs." data-section="interview: ask about the process">
+  <div class="term-number">048</div>
+  <div class="term-body">
+    <h3>Process-Oriented Question</h3>
+    <p>A question that focuses on how a process is performed, including its steps, problems, information, and outputs.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Process-Oriented Question" onclick="copyTerm(this, "Process-Oriented Question")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="open-ended question" data-definition="a question that allows the respondent to explain their answer rather than simply answering yes or no." data-section="interview: ask about the process">
+  <div class="term-number">049</div>
+  <div class="term-body">
+    <h3>Open-Ended Question</h3>
+    <p>A question that allows the respondent to explain their answer rather than simply answering yes or no.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Open-Ended Question" onclick="copyTerm(this, "Open-Ended Question")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="process walkthrough" data-definition="asking a user to explain a process from its beginning to its end." data-section="interview: ask about the process">
+  <div class="term-number">050</div>
+  <div class="term-body">
+    <h3>Process Walkthrough</h3>
+    <p>Asking a user to explain a process from its beginning to its end.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Process Walkthrough" onclick="copyTerm(this, "Process Walkthrough")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="duplicate entry" data-definition="a situation where the same information must be entered more than once." data-section="interview: ask about the process">
+  <div class="term-number">051</div>
+  <div class="term-body">
+    <h3>Duplicate Entry</h3>
+    <p>A situation where the same information must be entered more than once.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Duplicate Entry" onclick="copyTerm(this, "Duplicate Entry")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="reporting need" data-definition="a report or type of information that users repeatedly need to prepare or access." data-section="interview: ask about the process">
+  <div class="term-number">052</div>
+  <div class="term-body">
+    <h3>Reporting Need</h3>
+    <p>A report or type of information that users repeatedly need to prepare or access.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Reporting Need" onclick="copyTerm(this, "Reporting Need")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-10">
+  <div class="section-heading">
+    <span class="section-index">10</span>
+    <div><p class="eyebrow">SECTION 10</p><h2>Observation: Watch The Real Workflow</h2></div>
+    <span class="count-badge">9 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="observation: watch the real workflow" data-definition="the practice of directly watching how a process is actually performed to identify delays, information changes, and hidden steps." data-section="observation: watch the real workflow">
+  <div class="term-number">053</div>
+  <div class="term-body">
+    <h3>Observation: Watch the Real Workflow</h3>
+    <p>The practice of directly watching how a process is actually performed to identify delays, information changes, and hidden steps.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Observation: Watch the Real Workflow" onclick="copyTerm(this, "Observation: Watch the Real Workflow")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="real workflow" data-definition="what actually happens when users perform a process." data-section="observation: watch the real workflow">
+  <div class="term-number">054</div>
+  <div class="term-body">
+    <h3>Real Workflow</h3>
+    <p>What actually happens when users perform a process.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Real Workflow" onclick="copyTerm(this, "Real Workflow")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="reported workflow" data-definition="what users say happens when they describe the process." data-section="observation: watch the real workflow">
+  <div class="term-number">055</div>
+  <div class="term-body">
+    <h3>Reported Workflow</h3>
+    <p>What users say happens when they describe the process.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Reported Workflow" onclick="copyTerm(this, "Reported Workflow")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="workflow" data-definition="a sequence of activities performed to complete a process." data-section="observation: watch the real workflow">
+  <div class="term-number">056</div>
+  <div class="term-body">
+    <h3>Workflow</h3>
+    <p>A sequence of activities performed to complete a process.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Workflow" onclick="copyTerm(this, "Workflow")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="request" data-definition="the step where a user makes or submits a request." data-section="observation: watch the real workflow">
+  <div class="term-number">057</div>
+  <div class="term-body">
+    <h3>Request</h3>
+    <p>The step where a user makes or submits a request.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Request" onclick="copyTerm(this, "Request")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="record" data-definition="the step where information about the request or transaction is documented." data-section="observation: watch the real workflow">
+  <div class="term-number">058</div>
+  <div class="term-body">
+    <h3>Record</h3>
+    <p>The step where information about the request or transaction is documented.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Record" onclick="copyTerm(this, "Record")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="verify" data-definition="the step where information is checked for correctness or completeness." data-section="observation: watch the real workflow">
+  <div class="term-number">059</div>
+  <div class="term-body">
+    <h3>Verify</h3>
+    <p>The step where information is checked for correctness or completeness.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Verify" onclick="copyTerm(this, "Verify")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="process" data-definition="the step where the request or transaction is handled or acted upon." data-section="observation: watch the real workflow">
+  <div class="term-number">060</div>
+  <div class="term-body">
+    <h3>Process</h3>
+    <p>The step where the request or transaction is handled or acted upon.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Process" onclick="copyTerm(this, "Process")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="report" data-definition="the step where the results or information from the process are presented." data-section="observation: watch the real workflow">
+  <div class="term-number">061</div>
+  <div class="term-body">
+    <h3>Report</h3>
+    <p>The step where the results or information from the process are presented.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Report" onclick="copyTerm(this, "Report")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-11">
+  <div class="section-heading">
+    <span class="section-index">11</span>
+    <div><p class="eyebrow">SECTION 11</p><h2>Hidden Steps</h2></div>
+    <span class="count-badge">6 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="hidden steps" data-definition="activities that occur in the real workflow but may not be visible in the official or reported process." data-section="hidden steps">
+  <div class="term-number">062</div>
+  <div class="term-body">
+    <h3>Hidden Steps</h3>
+    <p>Activities that occur in the real workflow but may not be visible in the official or reported process.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Hidden Steps" onclick="copyTerm(this, "Hidden Steps")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="re-encoding" data-definition="entering the same information again into another form, file, spreadsheet, or system." data-section="hidden steps">
+  <div class="term-number">063</div>
+  <div class="term-body">
+    <h3>Re-encoding</h3>
+    <p>Entering the same information again into another form, file, spreadsheet, or system.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Re-encoding" onclick="copyTerm(this, "Re-encoding")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="waiting for approval" data-definition="a delay that occurs because a user must wait for an authorized person to approve an action." data-section="hidden steps">
+  <div class="term-number">064</div>
+  <div class="term-body">
+    <h3>Waiting for Approval</h3>
+    <p>A delay that occurs because a user must wait for an authorized person to approve an action.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Waiting for Approval" onclick="copyTerm(this, "Waiting for Approval")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="checking multiple files" data-definition="reviewing several separate files to find or verify the information needed to complete a task." data-section="hidden steps">
+  <div class="term-number">065</div>
+  <div class="term-body">
+    <h3>Checking Multiple Files</h3>
+    <p>Reviewing several separate files to find or verify the information needed to complete a task.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Checking Multiple Files" onclick="copyTerm(this, "Checking Multiple Files")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="sending status updates manually" data-definition="personally sending or updating information about the current status instead of having the system update it automatically." data-section="hidden steps">
+  <div class="term-number">066</div>
+  <div class="term-body">
+    <h3>Sending Status Updates Manually</h3>
+    <p>Personally sending or updating information about the current status instead of having the system update it automatically.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Sending Status Updates Manually" onclick="copyTerm(this, "Sending Status Updates Manually")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="workaround" data-definition="an alternative method created or used by users to deal with a problem in the existing process." data-section="hidden steps">
+  <div class="term-number">067</div>
+  <div class="term-body">
+    <h3>Workaround</h3>
+    <p>An alternative method created or used by users to deal with a problem in the existing process.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Workaround" onclick="copyTerm(this, "Workaround")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-12">
+  <div class="section-heading">
+    <span class="section-index">12</span>
+    <div><p class="eyebrow">SECTION 12</p><h2>Document Review: The Overlooked Evidence</h2></div>
+    <span class="count-badge">7 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="document review: the overlooked evidence" data-definition="the process of examining existing organizational documents to obtain evidence about the current process and its problems." data-section="document review: the overlooked evidence">
+  <div class="term-number">068</div>
+  <div class="term-body">
+    <h3>Document Review: The Overlooked Evidence</h3>
+    <p>The process of examining existing organizational documents to obtain evidence about the current process and its problems.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Document Review: The Overlooked Evidence" onclick="copyTerm(this, "Document Review: The Overlooked Evidence")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="forms" data-definition="documents used to collect, submit, or record information." data-section="document review: the overlooked evidence">
+  <div class="term-number">069</div>
+  <div class="term-body">
+    <h3>Forms</h3>
+    <p>Documents used to collect, submit, or record information.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Forms" onclick="copyTerm(this, "Forms")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="reports" data-definition="documents that present processed information, results, or findings." data-section="document review: the overlooked evidence">
+  <div class="term-number">070</div>
+  <div class="term-body">
+    <h3>Reports</h3>
+    <p>Documents that present processed information, results, or findings.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Reports" onclick="copyTerm(this, "Reports")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="spreadsheet" data-definition="a digital file used to organize, calculate, store, or report information." data-section="document review: the overlooked evidence">
+  <div class="term-number">071</div>
+  <div class="term-body">
+    <h3>Spreadsheet</h3>
+    <p>A digital file used to organize, calculate, store, or report information.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Spreadsheet" onclick="copyTerm(this, "Spreadsheet")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="policies" data-definition="rules or guidelines that govern how an organization or process should operate." data-section="document review: the overlooked evidence">
+  <div class="term-number">072</div>
+  <div class="term-body">
+    <h3>Policies</h3>
+    <p>Rules or guidelines that govern how an organization or process should operate.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Policies" onclick="copyTerm(this, "Policies")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="logs" data-definition="records of activities, transactions, events, or changes." data-section="document review: the overlooked evidence">
+  <div class="term-number">073</div>
+  <div class="term-body">
+    <h3>Logs</h3>
+    <p>Records of activities, transactions, events, or changes.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Logs" onclick="copyTerm(this, "Logs")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="templates" data-definition="standard formats used to create documents or records consistently." data-section="document review: the overlooked evidence">
+  <div class="term-number">074</div>
+  <div class="term-body">
+    <h3>Templates</h3>
+    <p>Standard formats used to create documents or records consistently.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Templates" onclick="copyTerm(this, "Templates")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-13">
+  <div class="section-heading">
+    <span class="section-index">13</span>
+    <div><p class="eyebrow">SECTION 13</p><h2>Survey</h2></div>
+    <span class="count-badge">4 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="survey" data-definition="a method of collecting information from users, particularly useful when the user base is larger." data-section="survey">
+  <div class="term-number">075</div>
+  <div class="term-body">
+    <h3>Survey</h3>
+    <p>A method of collecting information from users, particularly useful when the user base is larger.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Survey" onclick="copyTerm(this, "Survey")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="quantity" data-definition="the amount or number of something being measured." data-section="survey">
+  <div class="term-number">076</div>
+  <div class="term-body">
+    <h3>Quantity</h3>
+    <p>The amount or number of something being measured.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Quantity" onclick="copyTerm(this, "Quantity")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="pattern" data-definition="a repeated or common trend identified from survey responses or collected data." data-section="survey">
+  <div class="term-number">077</div>
+  <div class="term-body">
+    <h3>Pattern</h3>
+    <p>A repeated or common trend identified from survey responses or collected data.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Pattern" onclick="copyTerm(this, "Pattern")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="process investigation" data-definition="the examination of how a process actually works; surveys should support rather than replace this investigation." data-section="survey">
+  <div class="term-number">078</div>
+  <div class="term-body">
+    <h3>Process Investigation</h3>
+    <p>The examination of how a process actually works; surveys should support rather than replace this investigation.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Process Investigation" onclick="copyTerm(this, "Process Investigation")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-14">
+  <div class="section-heading">
+    <span class="section-index">14</span>
+    <div><p class="eyebrow">SECTION 14</p><h2>Turn Investigations Into Evidence</h2></div>
+    <span class="count-badge">8 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="turn investigations into evidence" data-definition="the process of converting information gathered from interviews, observations, documents, and surveys into evidence supporting the identified problem and system need." data-section="turn investigations into evidence">
+  <div class="term-number">079</div>
+  <div class="term-body">
+    <h3>Turn Investigations Into Evidence</h3>
+    <p>The process of converting information gathered from interviews, observations, documents, and surveys into evidence supporting the identified problem and system need.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Turn Investigations Into Evidence" onclick="copyTerm(this, "Turn Investigations Into Evidence")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="problem evidence" data-definition="evidence showing that a particular problem exists." data-section="turn investigations into evidence">
+  <div class="term-number">080</div>
+  <div class="term-body">
+    <h3>Problem Evidence</h3>
+    <p>Evidence showing that a particular problem exists.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Problem Evidence" onclick="copyTerm(this, "Problem Evidence")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="process evidence" data-definition="evidence showing how the workflow operates, including handoffs, repeated steps, and delays." data-section="turn investigations into evidence">
+  <div class="term-number">081</div>
+  <div class="term-body">
+    <h3>Process Evidence</h3>
+    <p>Evidence showing how the workflow operates, including handoffs, repeated steps, and delays.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Process Evidence" onclick="copyTerm(this, "Process Evidence")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="information evidence" data-definition="evidence involving missing fields, duplicate records, reporting needs, or other information problems." data-section="turn investigations into evidence">
+  <div class="term-number">082</div>
+  <div class="term-body">
+    <h3>Information Evidence</h3>
+    <p>Evidence involving missing fields, duplicate records, reporting needs, or other information problems.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Information Evidence" onclick="copyTerm(this, "Information Evidence")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="user evidence" data-definition="evidence showing user needs, preferences, difficulties, or usability requirements." data-section="turn investigations into evidence">
+  <div class="term-number">083</div>
+  <div class="term-body">
+    <h3>User Evidence</h3>
+    <p>Evidence showing user needs, preferences, difficulties, or usability requirements.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: User Evidence" onclick="copyTerm(this, "User Evidence")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="workflow map" data-definition="a representation of the steps and activities involved in completing a process." data-section="turn investigations into evidence">
+  <div class="term-number">084</div>
+  <div class="term-body">
+    <h3>Workflow Map</h3>
+    <p>A representation of the steps and activities involved in completing a process.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Workflow Map" onclick="copyTerm(this, "Workflow Map")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="handoff" data-definition="the transfer of work or information from one person, role, department, or process stage to another." data-section="turn investigations into evidence">
+  <div class="term-number">085</div>
+  <div class="term-body">
+    <h3>Handoff</h3>
+    <p>The transfer of work or information from one person, role, department, or process stage to another.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Handoff" onclick="copyTerm(this, "Handoff")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="usability needs" data-definition="user requirements concerning how easy, understandable, efficient, and practical a system should be to use." data-section="turn investigations into evidence">
+  <div class="term-number">086</div>
+  <div class="term-body">
+    <h3>Usability Needs</h3>
+    <p>User requirements concerning how easy, understandable, efficient, and practical a system should be to use.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Usability Needs" onclick="copyTerm(this, "Usability Needs")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-15">
+  <div class="section-heading">
+    <span class="section-index">15</span>
+    <div><p class="eyebrow">SECTION 15</p><h2>Build The Problem Statement</h2></div>
+    <span class="count-badge">7 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="build the problem statement" data-definition="the process of clearly describing where the problem occurs, what currently happens, why it is a problem, who or what is affected, and what improvement is needed." data-section="build the problem statement">
+  <div class="term-number">087</div>
+  <div class="term-body">
+    <h3>Build the Problem Statement</h3>
+    <p>The process of clearly describing where the problem occurs, what currently happens, why it is a problem, who or what is affected, and what improvement is needed.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Build the Problem Statement" onclick="copyTerm(this, "Build the Problem Statement")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="problem statement" data-definition="a clear description of an organizational problem, its current condition, impact, and needed improvement." data-section="build the problem statement">
+  <div class="term-number">088</div>
+  <div class="term-body">
+    <h3>Problem Statement</h3>
+    <p>A clear description of an organizational problem, its current condition, impact, and needed improvement.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Problem Statement" onclick="copyTerm(this, "Problem Statement")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="context" data-definition="the place, situation, organization, or setting where the problem occurs." data-section="build the problem statement">
+  <div class="term-number">089</div>
+  <div class="term-body">
+    <h3>Context</h3>
+    <p>The place, situation, organization, or setting where the problem occurs.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Context" onclick="copyTerm(this, "Context")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="current condition" data-definition="what is currently happening in the organization or process." data-section="build the problem statement">
+  <div class="term-number">090</div>
+  <div class="term-body">
+    <h3>Current Condition</h3>
+    <p>What is currently happening in the organization or process.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Current Condition" onclick="copyTerm(this, "Current Condition")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="pain/gap" data-definition="the problem, deficiency, or difference between the current condition and the desired condition." data-section="build the problem statement">
+  <div class="term-number">091</div>
+  <div class="term-body">
+    <h3>Pain/Gap</h3>
+    <p>The problem, deficiency, or difference between the current condition and the desired condition.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Pain/Gap" onclick="copyTerm(this, "Pain/Gap")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="impact" data-definition="the person, process, organization, result, or activity affected by the problem." data-section="build the problem statement">
+  <div class="term-number">092</div>
+  <div class="term-body">
+    <h3>Impact</h3>
+    <p>The person, process, organization, result, or activity affected by the problem.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Impact" onclick="copyTerm(this, "Impact")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="need" data-definition="the type of improvement required to address the identified problem." data-section="build the problem statement">
+  <div class="term-number">093</div>
+  <div class="term-body">
+    <h3>Need</h3>
+    <p>The type of improvement required to address the identified problem.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Need" onclick="copyTerm(this, "Need")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-16">
+  <div class="section-heading">
+    <span class="section-index">16</span>
+    <div><p class="eyebrow">SECTION 16</p><h2>Defining The Research Gap</h2></div>
+    <span class="count-badge">9 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="defining the research gap" data-definition="the process of identifying what is missing, limited, or not sufficiently assessed for the project&#x27;s specific context." data-section="defining the research gap">
+  <div class="term-number">094</div>
+  <div class="term-body">
+    <h3>Defining the Research Gap</h3>
+    <p>The process of identifying what is missing, limited, or not sufficiently assessed for the project&#x27;s specific context.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Defining the Research Gap" onclick="copyTerm(this, "Defining the Research Gap")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="research gap" data-definition="something missing, limited, or not adequately assessed in existing research, practices, or solutions for a particular context." data-section="defining the research gap">
+  <div class="term-number">095</div>
+  <div class="term-body">
+    <h3>Research Gap</h3>
+    <p>Something missing, limited, or not adequately assessed in existing research, practices, or solutions for a particular context.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Research Gap" onclick="copyTerm(this, "Research Gap")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="local need" data-definition="a need that is specific to a particular organization, community, location, or context." data-section="defining the research gap">
+  <div class="term-number">096</div>
+  <div class="term-body">
+    <h3>Local Need</h3>
+    <p>A need that is specific to a particular organization, community, location, or context.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Local Need" onclick="copyTerm(this, "Local Need")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="process gap" data-definition="a gap caused by problems or limitations in the current workflow." data-section="defining the research gap">
+  <div class="term-number">097</div>
+  <div class="term-body">
+    <h3>Process Gap</h3>
+    <p>A gap caused by problems or limitations in the current workflow.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Process Gap" onclick="copyTerm(this, "Process Gap")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="information gap" data-definition="a gap caused by the inability to access or obtain needed information." data-section="defining the research gap">
+  <div class="term-number">098</div>
+  <div class="term-body">
+    <h3>Information Gap</h3>
+    <p>A gap caused by the inability to access or obtain needed information.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Information Gap" onclick="copyTerm(this, "Information Gap")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="integration gap" data-definition="a gap caused by limited coordination or connection between systems, processes, or information sources." data-section="defining the research gap">
+  <div class="term-number">099</div>
+  <div class="term-body">
+    <h3>Integration Gap</h3>
+    <p>A gap caused by limited coordination or connection between systems, processes, or information sources.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Integration Gap" onclick="copyTerm(this, "Integration Gap")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="usability gap" data-definition="a gap caused by usability problems in an existing system." data-section="defining the research gap">
+  <div class="term-number">100</div>
+  <div class="term-body">
+    <h3>Usability Gap</h3>
+    <p>A gap caused by usability problems in an existing system.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Usability Gap" onclick="copyTerm(this, "Usability Gap")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="lack of evaluation" data-definition="a gap where an existing system or solution has not been properly evaluated." data-section="defining the research gap">
+  <div class="term-number">101</div>
+  <div class="term-body">
+    <h3>Lack of Evaluation</h3>
+    <p>A gap where an existing system or solution has not been properly evaluated.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Lack of Evaluation" onclick="copyTerm(this, "Lack of Evaluation")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="local implementation gap" data-definition="a gap where an existing solution has not been adapted or implemented for a specific local context." data-section="defining the research gap">
+  <div class="term-number">102</div>
+  <div class="term-body">
+    <h3>Local Implementation Gap</h3>
+    <p>A gap where an existing solution has not been adapted or implemented for a specific local context.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Local Implementation Gap" onclick="copyTerm(this, "Local Implementation Gap")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-17">
+  <div class="section-heading">
+    <span class="section-index">17</span>
+    <div><p class="eyebrow">SECTION 17</p><h2>Translate The Problem Into A System Direction</h2></div>
+    <span class="count-badge">7 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="translate the problem into a system direction" data-definition="the process of converting an observed problem into a need, system requirement, and corresponding system feature." data-section="translate the problem into a system direction">
+  <div class="term-number">103</div>
+  <div class="term-body">
+    <h3>Translate the Problem Into a System Direction</h3>
+    <p>The process of converting an observed problem into a need, system requirement, and corresponding system feature.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Translate the Problem Into a System Direction" onclick="copyTerm(this, "Translate the Problem Into a System Direction")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="observed problem" data-definition="a problem directly identified through investigation, observation, interviews, documents, or other evidence." data-section="translate the problem into a system direction">
+  <div class="term-number">104</div>
+  <div class="term-body">
+    <h3>Observed Problem</h3>
+    <p>A problem directly identified through investigation, observation, interviews, documents, or other evidence.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Observed Problem" onclick="copyTerm(this, "Observed Problem")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="system direction" data-definition="the direction or approach the proposed system takes to address the identified problem." data-section="translate the problem into a system direction">
+  <div class="term-number">105</div>
+  <div class="term-body">
+    <h3>System Direction</h3>
+    <p>The direction or approach the proposed system takes to address the identified problem.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: System Direction" onclick="copyTerm(this, "System Direction")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="requirement" data-definition="a specific capability or function that the system should provide." data-section="translate the problem into a system direction">
+  <div class="term-number">106</div>
+  <div class="term-body">
+    <h3>Requirement</h3>
+    <p>A specific capability or function that the system should provide.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Requirement" onclick="copyTerm(this, "Requirement")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="system feature" data-definition="a specific function or capability implemented in the system to satisfy a requirement." data-section="translate the problem into a system direction">
+  <div class="term-number">107</div>
+  <div class="term-body">
+    <h3>System Feature</h3>
+    <p>A specific function or capability implemented in the system to satisfy a requirement.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: System Feature" onclick="copyTerm(this, "System Feature")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="alignment" data-definition="the connection between the documented need and the system&#x27;s requirements or features." data-section="translate the problem into a system direction">
+  <div class="term-number">108</div>
+  <div class="term-body">
+    <h3>Alignment</h3>
+    <p>The connection between the documented need and the system&#x27;s requirements or features.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Alignment" onclick="copyTerm(this, "Alignment")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="feature-need alignment" data-definition="the principle that every system feature should have a clear connection to a documented need." data-section="translate the problem into a system direction">
+  <div class="term-number">109</div>
+  <div class="term-body">
+    <h3>Feature-Need Alignment</h3>
+    <p>The principle that every system feature should have a clear connection to a documented need.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Feature-Need Alignment" onclick="copyTerm(this, "Feature-Need Alignment")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-18">
+  <div class="section-heading">
+    <span class="section-index">18</span>
+    <div><p class="eyebrow">SECTION 18</p><h2>Keep The Capstone Scope Realistic</h2></div>
+    <span class="count-badge">9 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="keep the capstone scope realistic" data-definition="the principle of developing a smaller, manageable system that can be properly completed and evaluated rather than an unnecessarily large project." data-section="keep the capstone scope realistic">
+  <div class="term-number">110</div>
+  <div class="term-body">
+    <h3>Keep the Capstone Scope Realistic</h3>
+    <p>The principle of developing a smaller, manageable system that can be properly completed and evaluated rather than an unnecessarily large project.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Keep the Capstone Scope Realistic" onclick="copyTerm(this, "Keep the Capstone Scope Realistic")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="capstone scope" data-definition="the defined boundaries of what the capstone project will and will not cover." data-section="keep the capstone scope realistic">
+  <div class="term-number">111</div>
+  <div class="term-body">
+    <h3>Capstone Scope</h3>
+    <p>The defined boundaries of what the capstone project will and will not cover.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Capstone Scope" onclick="copyTerm(this, "Capstone Scope")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="realistic scope" data-definition="a project scope that is achievable within the available time, resources, users, data, and technical capabilities." data-section="keep the capstone scope realistic">
+  <div class="term-number">112</div>
+  <div class="term-body">
+    <h3>Realistic Scope</h3>
+    <p>A project scope that is achievable within the available time, resources, users, data, and technical capabilities.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Realistic Scope" onclick="copyTerm(this, "Realistic Scope")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="users" data-definition="the people who will use or interact with the system." data-section="keep the capstone scope realistic">
+  <div class="term-number">113</div>
+  <div class="term-body">
+    <h3>Users</h3>
+    <p>The people who will use or interact with the system.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Users" onclick="copyTerm(this, "Users")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="process" data-definition="the organizational process or processes included within the project&#x27;s scope." data-section="keep the capstone scope realistic">
+  <div class="term-number">114</div>
+  <div class="term-body">
+    <h3>Process</h3>
+    <p>The organizational process or processes included within the project&#x27;s scope.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Process" onclick="copyTerm(this, "Process")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="data" data-definition="the information that the system needs to collect, store, process, or manage." data-section="keep the capstone scope realistic">
+  <div class="term-number">115</div>
+  <div class="term-body">
+    <h3>Data</h3>
+    <p>The information that the system needs to collect, store, process, or manage.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Data" onclick="copyTerm(this, "Data")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="functions" data-definition="the essential operations or capabilities that the system must perform." data-section="keep the capstone scope realistic">
+  <div class="term-number">116</div>
+  <div class="term-body">
+    <h3>Functions</h3>
+    <p>The essential operations or capabilities that the system must perform.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Functions" onclick="copyTerm(this, "Functions")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="evaluation" data-definition="the process of measuring or judging the quality and results of the developed system." data-section="keep the capstone scope realistic">
+  <div class="term-number">117</div>
+  <div class="term-body">
+    <h3>Evaluation</h3>
+    <p>The process of measuring or judging the quality and results of the developed system.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Evaluation" onclick="copyTerm(this, "Evaluation")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="quality attributes" data-definition="characteristics used to measure or evaluate the quality of a system." data-section="keep the capstone scope realistic">
+  <div class="term-number">118</div>
+  <div class="term-body">
+    <h3>Quality Attributes</h3>
+    <p>Characteristics used to measure or evaluate the quality of a system.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Quality Attributes" onclick="copyTerm(this, "Quality Attributes")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section>
+<section class="section-block" id="section-19">
+  <div class="section-heading">
+    <span class="section-index">19</span>
+    <div><p class="eyebrow">SECTION 19</p><h2>A Practical Capstone Title Format</h2></div>
+    <span class="count-badge">5 terms</span>
+  </div>
+  <div class="cards">
+<article class="term-card" data-term="a practical capstone title format" data-definition="a structure for creating a capstone title that identifies the development or design, system type, target organization or need, and purpose or function." data-section="a practical capstone title format">
+  <div class="term-number">119</div>
+  <div class="term-body">
+    <h3>A Practical Capstone Title Format</h3>
+    <p>A structure for creating a capstone title that identifies the development or design, system type, target organization or need, and purpose or function.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: A Practical Capstone Title Format" onclick="copyTerm(this, "A Practical Capstone Title Format")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="development/design" data-definition="the part of the title that indicates that a system will be developed or designed." data-section="a practical capstone title format">
+  <div class="term-number">120</div>
+  <div class="term-body">
+    <h3>Development/Design</h3>
+    <p>The part of the title that indicates that a system will be developed or designed.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Development/Design" onclick="copyTerm(this, "Development/Design")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="type of system" data-definition="the part of the title that identifies what kind of information system is being developed." data-section="a practical capstone title format">
+  <div class="term-number">121</div>
+  <div class="term-body">
+    <h3>Type of System</h3>
+    <p>The part of the title that identifies what kind of information system is being developed.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Type of System" onclick="copyTerm(this, "Type of System")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="target organization/need" data-definition="the part of the title that identifies the organization, users, or specific need being addressed." data-section="a practical capstone title format">
+  <div class="term-number">122</div>
+  <div class="term-body">
+    <h3>Target Organization/Need</h3>
+    <p>The part of the title that identifies the organization, users, or specific need being addressed.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Target Organization/Need" onclick="copyTerm(this, "Target Organization/Need")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article>
+<article class="term-card" data-term="purpose/function" data-definition="the part of the title that states what the proposed system is intended to accomplish." data-section="a practical capstone title format">
+  <div class="term-number">123</div>
+  <div class="term-body">
+    <h3>Purpose/Function</h3>
+    <p>The part of the title that states what the proposed system is intended to accomplish.</p>
+  </div>
+  <button class="copy-btn" title="Copy term" aria-label="Copy term: Purpose/Function" onclick="copyTerm(this, "Purpose/Function")">
+    <i class="fa-regular fa-copy"></i>
+  </button>
+</article></div>
+</section></div>
+<div class="no-results" id="noResults"><i class="fa-solid fa-magnifying-glass"></i><div>No matching terms found.</div><small>Try another word from the term or definition.</small></div>
+
+</main>
+<script>
+const search=document.getElementById('search'),clearSearch=document.getElementById('clearSearch'),resultCount=document.getElementById('resultCount'),noResults=document.getElementById('noResults'),cards=[...document.querySelectorAll('.term-card')],sections=[...document.querySelectorAll('.section-block')];
+function escapeRegExp(str){return str.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+function highlight(el,q){const original=el.dataset.original||el.textContent;el.dataset.original=original;if(!q){el.textContent=original;return}const parts=original.split(new RegExp('('+escapeRegExp(q)+')','ig'));el.innerHTML=parts.map((p,i)=>i%2?'<mark>'+p.replace(/</g,'&lt;')+'</mark>':p.replace(/</g,'&lt;')).join('')}
+function filterTerms(){const q=search.value.trim().toLowerCase();let visible=0;cards.forEach(card=>{const match=!q||card.dataset.term.includes(q)||card.dataset.definition.includes(q)||card.dataset.section.includes(q);card.classList.toggle('hidden',!match);if(match){visible++;highlight(card.querySelector('h3'),q);highlight(card.querySelector('p'),q)}});sections.forEach(section=>{const hasVisible=[...section.querySelectorAll('.term-card')].some(c=>!c.classList.contains('hidden'));section.classList.toggle('hidden',!hasVisible)});resultCount.textContent=visible;noResults.style.display=visible?'none':'block'}
+search.addEventListener('input',filterTerms);
+search.addEventListener('keydown',e=>{
+  if(e.key==='Enter'){
+    e.preventDefault();
+    filterTerms();
+    const firstVisible=document.querySelector('.term-card:not(.hidden)');
+    if(firstVisible) firstVisible.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+});clearSearch.addEventListener('click',()=>{search.value='';filterTerms();search.focus()});
+function jumpTo(id){const target=document.getElementById(id);if(target)target.scrollIntoView({behavior:'smooth',block:'start'})}
+function copyTerm(btn,term){navigator.clipboard.writeText(term).then(()=>{const icon=btn.querySelector('i');icon.className='fa-solid fa-check';setTimeout(()=>icon.className='fa-regular fa-copy',1100)}).catch(()=>{})}
+</script>
+</body>
+</html>
